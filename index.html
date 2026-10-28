@@ -26,4 +26,60 @@
  <section class="page" id="page-staff"><div class="page-heading"><div><p class="eyebrow">ADMINISTRACIÓN</p><h1>Usuarios y permisos</h1><p class="muted">Gestioná quién puede acceder a cada módulo.</p></div></div><div class="panel"><h2>Roles disponibles</h2><div class="role-grid"><div><b>Administrador</b><p>Acceso completo, gestión de usuarios, inventario y configuración.</p></div><div><b>Veterinario</b><p>Pacientes, historias clínicas, vacunación y turnos.</p></div><div><b>Recepción</b><p>Pacientes, propietarios y agenda; sin acceso a gestión clínica avanzada ni usuarios.</p></div></div><p class="muted">Por seguridad, las altas de usuarios y los cambios de rol se realizan desde Supabase Auth y la tabla de perfiles por un administrador autorizado. Las políticas de base de datos se aplican en el servidor, no solamente en la interfaz.</p></div></section>
  </main></div>
  <div id="modalBackdrop" class="modal-backdrop hidden"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><p class="eyebrow">PATITAS · REGISTRO</p><h2 id="modalTitle">Nuevo registro</h2></div><button class="icon-btn" id="closeModal" aria-label="Cerrar ventana">×</button></div><form id="modalForm"><div id="modalFields" class="form-grid"></div><div class="modal-actions"><button type="button" class="btn secondary" id="cancelModal">Cancelar</button><button type="submit" class="btn primary" id="modalSubmit">Guardar</button></div></form></section></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- Chatbot de Patitas -->
+<div id="chatbot" class="chatbot">
+  <button
+    id="chatbot-toggle"
+    class="chatbot-toggle"
+    type="button"
+    aria-label="Abrir asistente de Patitas"
+    aria-expanded="false"
+  >
+    🐾
+  </button>
+
+  <section
+    id="chatbot-panel"
+    class="chatbot-panel"
+    aria-label="Asistente virtual"
+    hidden
+  >
+    <header class="chatbot-header">
+      <div>
+        <strong>Asistente Patitas</strong>
+        <small>Ayuda rápida para tu clínica</small>
+      </div>
+
+      <button
+        id="chatbot-close"
+        type="button"
+        aria-label="Cerrar chat"
+      >×</button>
+    </header>
+
+    <div
+      id="chatbot-messages"
+      class="chatbot-messages"
+      aria-live="polite"
+    >
+      <div class="chatbot-message bot">
+        ¡Hola! 🐾 Soy el asistente de Patitas.
+        Elegí una pregunta para comenzar.
+      </div>
+    </div>
+
+    <div id="chatbot-options" class="chatbot-options"></div>
+
+    <button
+      id="chatbot-home"
+      class="chatbot-home"
+      type="button"
+    >
+      ← Volver al menú principal
+    </button>
+  </section>
+</div>
+
+<link rel="stylesheet" href="chatbot.css">
+<script src="chatbot.js" defer></script>
 </body></html>

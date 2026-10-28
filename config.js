@@ -4,7 +4,7 @@
  * NUNCA pongas aquí la service_role key ni una clave de OpenAI.
  */
 window.PATITAS_CONFIG = {
-  supabaseUrl: 'https://TU-PROYECTO.supabase.co',
-  supabaseAnonKey: 'TU_SUPABASE_ANON_KEY',
+  supabaseUrl: 'https://kylvjxtzopdyzaxsbcok.supabase.co',
+  supabaseAnonKey: 'sb_publishable_KBuTPNkIiC9xRUfyeom38g_asIikCBz',
   assistantFunctionName: 'assistant'
 };
